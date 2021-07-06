@@ -1,0 +1,65 @@
+procedure dot_product (var v1: array_of real[2] , var v2: array_of real[2])
+var
+ps: real;
+BEGIN
+ps:= v1[0]*v2[0] + v1[1]*v2[1];
+if (ps:= 0) then
+write ("v1 et v2 sont orthogonaux");
+else
+write("v1 et v2 ne sont pas orthogonaux");
+end_if
+END
+algorithme produit scalaire
+var
+v1: array_of real[2];
+v2: array_of real[2];
+i: integer;
+j: integer;
+BEGIN
+write ("les composantes de v1 sont");
+for i from 0 to 1 do
+read (v1[i]);
+end_for
+write ("les composantes de v2 sont");
+for j from 0 to 1 do
+read(v2[j]);
+end_for
+dot_product(v1,v2);
+END
+
+
+
+
+
+function dot_product (v1: array_of real[2],v2: array_of real[2]): real
+var
+ps: real;
+BEGIN
+ps:= v1[0]*v2[0] + v1[1]*v2[1];
+return ps;
+END
+algorithme produit scalaire
+var
+v1: array_of real[2];
+v2: array_of real[2];
+i: integer;
+j: integer;
+p: real;
+BEGIN
+write ("les composantes de v1 sont");
+for i from 0 to 1 do
+read (v1[i]);
+end_for
+write ("les composantes de v2 sont");
+for j from 0 to 1 do
+read(v2[j]);
+end_for
+p:= dot_product(v1,v2);
+if (p:=0) then
+write("v1 et v2 sont orthogonaux");
+else
+write("v1 et v2 ne sont pas orthogonaux");
+end_if
+END
+
+
